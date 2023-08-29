@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Mobile 1</string>
+    <string name="first_partial">First Partial</string>
+    <string name="second_partial">Second Partial</string>
+    <string name="third_partial">Third Partial</string>
+    <string name="padel_score">Padel Score</string>
+    <string name="even_or_odd">Even or Odd</string>
+</resources>
