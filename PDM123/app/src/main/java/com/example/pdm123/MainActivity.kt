@@ -26,6 +26,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.example.pdm123.ui.theme.EvenOddView
+import com.example.pdm123.ui.theme.EvenOddViewModel
 import com.example.pdm123.ui.theme.FirstPartialView
 import com.example.pdm123.ui.theme.NavBarItems
 import com.example.pdm123.ui.theme.PDM123Theme
@@ -84,7 +85,7 @@ fun NavigationHost(navController: NavHostController) {
             PadelScoreView()
         }
         composable(NavRoutes.evenodd.route) {
-            EvenOddView()
+            EvenOddView(navController = navController,viewModel = EvenOddViewModel())
         }
 
     }

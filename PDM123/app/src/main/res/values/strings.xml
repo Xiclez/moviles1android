@@ -5,4 +5,12 @@
     <string name="third_partial">Third Partial</string>
     <string name="padel_score">Padel Score</string>
     <string name="even_or_odd">Even or Odd</string>
+    <string name="calculate">Calculate</string>
+    <string name="even_state">Your number is even</string>
+    <string name="odd_state">Your number is odd</string>
+    <string name="zero_state">Your number is zero</string>
+    <string name="even_odd_empty_state">Please type an integer number</string>
+    <string name="cards">Cards</string>
+    <string name="hide">Hide</string>
+    <string name="get_card">Get Card</string>
 </resources>

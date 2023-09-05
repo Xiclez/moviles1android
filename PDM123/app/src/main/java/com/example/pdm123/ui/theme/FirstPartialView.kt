@@ -11,20 +11,26 @@ import androidx.navigation.NavController
 import com.example.pdm123.R
 
 @Composable
-fun FirstPartialView(navController: NavController){
+fun FirstPartialView(navController: NavController) {
     Column(
         modifier = Modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
 
-        ){
-        Text(text = stringResource(id = R.string.first_partial), color = MaterialTheme.colors.secondary)
-        Button(onClick = { navController.navigate(route = "padelScore")}) {
-            Text(text  = stringResource(id = R.string.padel_score))
+    ) {
+        Text(
+            text = stringResource(id = R.string.first_partial),
+            color = MaterialTheme.colors.secondary
+        )
+        Button(onClick = { navController.navigate(route = "padelScore") }) {
+            Text(text = stringResource(id = R.string.padel_score))
         }
-        Button(onClick = { navController.navigate(route = "evenodd")}) {
-            Text(text  = stringResource(id = R.string.even_or_odd))
-    }
+        Button(onClick = { navController.navigate(route = "evenodd") }) {
+            Text(text = stringResource(id = R.string.even_or_odd))
+        }
+        Button(onClick = { navController.navigate(route = "cards") }) {
+            Text(text = stringResource(id =R.string.cards))
 
+        }
     }
 }

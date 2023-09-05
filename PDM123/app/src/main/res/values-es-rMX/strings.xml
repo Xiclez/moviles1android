@@ -7,4 +7,12 @@
     <string name="third_partial">Tercer Parcial</string>
     <string name="padel_score">Puntuacion de Padel</string>
     <string name="even_or_odd">Par o impar</string>
+    <string name="calculate">Calcular</string>
+    <string name="even_state">Tu numero es par</string>
+    <string name="odd_state">Tu numero es impar</string>
+    <string name="zero_state">Tu numero es cero</string>
+    <string name="even_odd_empty_state">Por favor escribe un numero entero</string>
+    <string name="cards">Cartas</string>
+    <string name="hide">Esconder</string>
+    <string name="get_card">Obtener Carta</string>
 </resources>

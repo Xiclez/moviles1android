@@ -69,5 +69,6 @@ dependencies {
     implementation ("androidx.compose.material:material-icons-extended:compose_ui_version")
     implementation ("androidx.navigation:navigation-compose:2.7.0")
     implementation ("androidx.compose.material:material:1.4.2")
+    implementation ("androidx.compose.runtime:runtime-livedata:compose_ui_version")
 
 }
