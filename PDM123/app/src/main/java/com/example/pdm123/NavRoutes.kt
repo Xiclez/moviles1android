@@ -9,4 +9,5 @@ sealed class NavRoutes(val route: String) {
     object padelScore : NavRoutes("padelScore")
     object evenodd : NavRoutes("evenodd")
     object cards : NavRoutes("cards")
+    object numComparator : NavRoutes("numComparator")
 }

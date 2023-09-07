@@ -5,24 +5,23 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.pdm123.R
 
-data class EvenOdd(val num: Int)
+data class EvenOdd(val num: Int?)
 class EvenOddViewModel : ViewModel() {
-    private val evenOddState = MutableLiveData<Int>()
-    fun getEvenOddState(): LiveData<Int> = evenOddState
+    private val evenOddState = MutableLiveData<String?>()
+    fun getEvenOddState(): LiveData<String?> = evenOddState
 
     fun calculateEvenOdd(evenOdd: EvenOdd) {
         val number = evenOdd.num
         if (number == null) {
-            evenOddState.postValue(R.string.even_odd_empty_state)
+            evenOddState.postValue("Please type a number")
         } else if (number == 0) {
-            evenOddState.postValue(R.string.zero_state)
+            evenOddState.postValue("Zero is even")
         } else if (number % 2 == 0) {
-            evenOddState.postValue(R.string.even_state)
+            evenOddState.postValue("Your number is even")
         } else if (number % 2 != 0) {
-            evenOddState.postValue(R.string.odd_state)
+            evenOddState.postValue("Your number is odd")
         } else if (number < 0) {
-            evenOddState.postValue(R.string.even_odd_empty_state)
+            evenOddState.postValue("Please type an integer number")
         }
     }
 }
-

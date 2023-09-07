@@ -19,10 +19,10 @@ import androidx.navigation.NavController
 import com.example.pdm123.R
 
 @Composable
-fun EvenOddView(navController: NavController, viewModel: EvenOddViewModel) {
+fun EvenOddView(viewModel: EvenOddViewModel) {
     // Esta variable va a almacenar el valor de la caja de texto
     var txtNumber by remember { mutableStateOf("") }
-    val evenOddState by viewModel.getEvenOddState().observeAsState(R.string.even_odd_empty_state)
+    val evenOddState by viewModel.getEvenOddState().observeAsState("")
 
     Column(
         modifier = Modifier.fillMaxSize(),
@@ -54,8 +54,11 @@ fun EvenOddView(navController: NavController, viewModel: EvenOddViewModel) {
         )
 
         // Mostrar mensajes en función del estado
-        Text(text = stringResource(id = evenOddState))
+        Text(text = evenOddState ?: "")
 
+        // Mostrar un mensaje de error si el valor no es un número válido
+        if (evenOddState == null || evenOddState == stringResource(id = R.string.even_odd_empty_state)) {
+            Text(text = stringResource(id = R.string.even_odd_empty_state))
         }
     }
 }

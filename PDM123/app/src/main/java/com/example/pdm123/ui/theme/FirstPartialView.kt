@@ -32,5 +32,9 @@ fun FirstPartialView(navController: NavController) {
             Text(text = stringResource(id =R.string.cards))
 
         }
+        Button(onClick = { navController.navigate(route = "numComparator") }) {
+            Text(text = stringResource(id =R.string.comparator))
+
+        }
     }
 }

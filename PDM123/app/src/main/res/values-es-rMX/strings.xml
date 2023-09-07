@@ -15,4 +15,11 @@
     <string name="cards">Cartas</string>
     <string name="hide">Esconder</string>
     <string name="get_card">Obtener Carta</string>
+    <string name="num1">Numero 1</string>
+    <string name="num2">Numero 2</string>
+    <string name="num3">Numero 3</string>
+    <string name="compare">Comparar</string>
+    <string name="comparator">Comparador de numeros</string>
+    <string name="compare_error_msg">Please type three different numbers</string>
+
 </resources>

@@ -1,9 +1,7 @@
 package com.example.pdm123.ui.theme
 
-import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import kotlin.random.Random
 import com.example.pdm123.R
 
 class CardsViewModel : ViewModel() {
@@ -11,9 +9,9 @@ class CardsViewModel : ViewModel() {
 
     fun getRandomImage(): MutableLiveData<Int> = cardImageResId
     fun getRandomCard(){
-        val randomNumber = Random.nextInt(1,14)
+        val randomNumber = (1..13).random()
             when (randomNumber){
-                1-> cardImageResId.postValue(R.drawable.A)
+                1-> cardImageResId.postValue(R.drawable.a)
                 2->cardImageResId.postValue(R.drawable.c2)
                 3->cardImageResId.postValue(R.drawable.c3)
                 4->cardImageResId.postValue(R.drawable.c4)
@@ -23,9 +21,9 @@ class CardsViewModel : ViewModel() {
                 8->cardImageResId.postValue(R.drawable.c8)
                 9->cardImageResId.postValue(R.drawable.c9)
                 10->cardImageResId.postValue(R.drawable.c10)
-                11->cardImageResId.postValue(R.drawable.J)
-                12->cardImageResId.postValue(R.drawable.Q)
-                13->cardImageResId.postValue(R.drawable.K)
+                11->cardImageResId.postValue(R.drawable.j)
+                12->cardImageResId.postValue(R.drawable.q)
+                13->cardImageResId.postValue(R.drawable.k)
             }
     }
 

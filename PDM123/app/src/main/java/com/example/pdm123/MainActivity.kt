@@ -25,10 +25,14 @@ import androidx.navigation.compose.*
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+import com.example.pdm123.ui.theme.CardsView
+import com.example.pdm123.ui.theme.CardsViewModel
 import com.example.pdm123.ui.theme.EvenOddView
 import com.example.pdm123.ui.theme.EvenOddViewModel
 import com.example.pdm123.ui.theme.FirstPartialView
 import com.example.pdm123.ui.theme.NavBarItems
+import com.example.pdm123.ui.theme.NumberComparatorView
+import com.example.pdm123.ui.theme.NumberComparatorViewModel
 import com.example.pdm123.ui.theme.PDM123Theme
 import com.example.pdm123.ui.theme.PadelScoreView
 import com.example.pdm123.ui.theme.SecondPartialView
@@ -85,7 +89,14 @@ fun NavigationHost(navController: NavHostController) {
             PadelScoreView()
         }
         composable(NavRoutes.evenodd.route) {
-            EvenOddView(navController = navController,viewModel = EvenOddViewModel())
+            EvenOddView(viewModel = EvenOddViewModel())
+        }
+
+        composable(NavRoutes.cards.route) {
+            CardsView(viewModel = CardsViewModel() )
+        }
+        composable(NavRoutes.numComparator.route) {
+            NumberComparatorView(viewModel = NumberComparatorViewModel())
         }
 
     }

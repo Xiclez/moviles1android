@@ -13,4 +13,10 @@
     <string name="cards">Cards</string>
     <string name="hide">Hide</string>
     <string name="get_card">Get Card</string>
+    <string name="num1">Number 1</string>
+    <string name="num2">Number 2</string>
+    <string name="num3">Number 3</string>
+    <string name="compare">Compare</string>
+    <string name="comparator">Number comparator</string>
+    <string name="compare_error_msg">Por favor, ingresa tres números diferentes.</string>
 </resources>

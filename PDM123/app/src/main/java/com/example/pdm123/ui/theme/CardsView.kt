@@ -24,7 +24,7 @@ import com.example.pdm123.R
 import kotlin.random.Random
 
 @Composable
-fun CardsView(navController: NavController, viewModel: CardsViewModel) {
+fun CardsView(viewModel: CardsViewModel) {
 val card by viewModel.getRandomImage().observeAsState(R.drawable.back)
     Column {
     Image(painter = painterResource(id =card), contentDescription = "Back",
