@@ -29,12 +29,20 @@ fun FirstPartialView(navController: NavController) {
             Text(text = stringResource(id = R.string.even_or_odd))
         }
         Button(onClick = { navController.navigate(route = "cards") }) {
-            Text(text = stringResource(id =R.string.cards))
+            Text(text = stringResource(id = R.string.cards))
 
         }
         Button(onClick = { navController.navigate(route = "numComparator") }) {
-            Text(text = stringResource(id =R.string.comparator))
+            Text(text = stringResource(id = R.string.comparator))
 
+        }
+
+        Button(onClick = { navController.navigate(route = "barber") }) {
+            Text(text = "Barber")
+
+        }
+        Button(onClick = { navController.navigate(route = "firstTest") }) {
+            Text(text = "Primer Parcial")
         }
     }
 }

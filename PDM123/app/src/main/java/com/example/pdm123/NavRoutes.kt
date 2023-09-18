@@ -10,4 +10,6 @@ sealed class NavRoutes(val route: String) {
     object evenodd : NavRoutes("evenodd")
     object cards : NavRoutes("cards")
     object numComparator : NavRoutes("numComparator")
+    object barber : NavRoutes("barber")
+    object firstPartialTest : NavRoutes("firstTest")
 }

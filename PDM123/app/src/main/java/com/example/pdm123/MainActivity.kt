@@ -25,6 +25,10 @@ import androidx.navigation.compose.*
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+import com.example.pdm123.ui.theme.ApplesView
+import com.example.pdm123.ui.theme.ApplesViewModel
+import com.example.pdm123.ui.theme.BarberView
+import com.example.pdm123.ui.theme.BarberViewModel
 import com.example.pdm123.ui.theme.CardsView
 import com.example.pdm123.ui.theme.CardsViewModel
 import com.example.pdm123.ui.theme.EvenOddView
@@ -97,6 +101,13 @@ fun NavigationHost(navController: NavHostController) {
         }
         composable(NavRoutes.numComparator.route) {
             NumberComparatorView(viewModel = NumberComparatorViewModel())
+        }
+
+        composable(NavRoutes.barber.route) {
+            BarberView(viewModel = BarberViewModel())
+        }
+        composable(NavRoutes.firstPartialTest.route) {
+            ApplesView(viewModel = ApplesViewModel())
         }
 
     }
