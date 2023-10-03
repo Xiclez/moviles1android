@@ -37,10 +37,12 @@ import com.example.pdm123.ui.theme.FirstPartialView
 import com.example.pdm123.ui.theme.NavBarItems
 import com.example.pdm123.ui.theme.NumberComparatorView
 import com.example.pdm123.ui.theme.NumberComparatorViewModel
+import com.example.pdm123.ui.theme.OnboardingView
 import com.example.pdm123.ui.theme.PDM123Theme
 import com.example.pdm123.ui.theme.PadelScoreView
 import com.example.pdm123.ui.theme.SecondPartialView
 import com.example.pdm123.ui.theme.ThirdPartialView
+import com.google.accompanist.pager.ExperimentalPagerApi
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -77,6 +79,7 @@ fun MainScreen() {
 /*
 Esta funcion va a ser encargada de manejar los tabs de la aplicacion
  */
+@OptIn(ExperimentalPagerApi::class)
 @Composable
 fun NavigationHost(navController: NavHostController) {
     NavHost(navController = navController, startDestination = NavRoutes.firstPartial.route) {
@@ -84,7 +87,7 @@ fun NavigationHost(navController: NavHostController) {
             FirstPartialView(navController = navController)
         }
         composable(NavRoutes.secondPartial.route) {
-            SecondPartialView()
+            SecondPartialView(navController = navController)
         }
         composable(NavRoutes.thirdPartial.route) {
             ThirdPartialView()
@@ -109,6 +112,11 @@ fun NavigationHost(navController: NavHostController) {
         composable(NavRoutes.firstPartialTest.route) {
             ApplesView(viewModel = ApplesViewModel())
         }
+        composable(NavRoutes.lists.route) {
+            OnboardingView()
+        }
+
+
 
     }
 }

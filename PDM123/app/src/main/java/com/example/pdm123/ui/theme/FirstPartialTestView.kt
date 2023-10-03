@@ -35,11 +35,6 @@ fun ApplesView(viewModel: ApplesViewModel) {
     val actualProdRes by viewModel.actualProduction
     val percentageRes by viewModel.percentage
     val context = LocalContext.current
-
-
-    var totalProdTxt by remember { mutableStateOf(totalProdRes.toString()) }
-    var actualProdTxt by remember { mutableStateOf(actualProdRes.toString()) }
-    var percentageTxt by remember { mutableStateOf("0.0") }
     var backgroundColor by remember { mutableStateOf(Color.Transparent) }
 
 

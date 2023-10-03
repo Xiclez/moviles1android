@@ -1,4 +1,4 @@
-package com.example.onboarding.ui.theme
+package com.example.pdm123.ui.theme
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.fillMaxSize

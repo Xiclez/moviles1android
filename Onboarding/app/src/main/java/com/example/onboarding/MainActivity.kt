@@ -12,6 +12,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.onboarding.ui.theme.OnboardingTheme
 import com.example.onboarding.ui.theme.OnboardingView
+import com.example.onboarding.ui.theme.PreviewViewComposable
 import com.google.accompanist.pager.ExperimentalPagerApi
 
 class MainActivity : ComponentActivity() {
@@ -22,7 +23,7 @@ class MainActivity : ComponentActivity() {
             OnboardingTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
-                    OnboardingView()
+                    PreviewViewComposable()
                 }
             }
         }

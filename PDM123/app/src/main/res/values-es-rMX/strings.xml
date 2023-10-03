@@ -21,5 +21,6 @@
     <string name="compare">Comparar</string>
     <string name="comparator">Comparador de numeros</string>
     <string name="compare_error_msg">Please type three different numbers</string>
+    <string name="lists">Lists</string>
 
 </resources>
