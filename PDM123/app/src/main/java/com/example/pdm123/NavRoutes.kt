@@ -13,5 +13,8 @@ sealed class NavRoutes(val route: String) {
     object barber : NavRoutes("barber")
     object firstPartialTest : NavRoutes("firstTest")
     object lists : NavRoutes("lists")
+    object onboarding: NavRoutes("onboarding")
+    object qr : NavRoutes("qr")
+
 
 }

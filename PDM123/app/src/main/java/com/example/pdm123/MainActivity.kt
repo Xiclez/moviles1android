@@ -1,5 +1,6 @@
 package com.example.pdm123
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.compose.ui.graphics.Color
@@ -40,6 +41,8 @@ import com.example.pdm123.ui.theme.NumberComparatorViewModel
 import com.example.pdm123.ui.theme.OnboardingView
 import com.example.pdm123.ui.theme.PDM123Theme
 import com.example.pdm123.ui.theme.PadelScoreView
+import com.example.pdm123.ui.theme.ListView
+import com.example.pdm123.ui.theme.PreviewViewComposable
 import com.example.pdm123.ui.theme.SecondPartialView
 import com.example.pdm123.ui.theme.ThirdPartialView
 import com.google.accompanist.pager.ExperimentalPagerApi
@@ -79,7 +82,9 @@ fun MainScreen() {
 /*
 Esta funcion va a ser encargada de manejar los tabs de la aplicacion
  */
+@SuppressLint("UnsafeOptInUsageError")
 @OptIn(ExperimentalPagerApi::class)
+
 @Composable
 fun NavigationHost(navController: NavHostController) {
     NavHost(navController = navController, startDestination = NavRoutes.firstPartial.route) {
@@ -112,8 +117,17 @@ fun NavigationHost(navController: NavHostController) {
         composable(NavRoutes.firstPartialTest.route) {
             ApplesView(viewModel = ApplesViewModel())
         }
+
         composable(NavRoutes.lists.route) {
+            ListView()
+        }
+        composable(NavRoutes.onboarding.route){
             OnboardingView()
+
+        }
+
+        composable(NavRoutes.qr.route){
+            PreviewViewComposable()
         }
 
 
